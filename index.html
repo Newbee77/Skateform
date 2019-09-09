@@ -27,23 +27,41 @@ margin:0px auto;
     </style>
     
 </head>
+
+
 <body style="background-color: white">
     <h1>Bli medlem i Häljarp Skate</h1>
     <fieldset>
-            <label for="txtFirstName">Förnamn:</label><input type="text" name="txtFirstName" size="20">
-            <label for="txtLastName">Efternamn:</label><input type="text" name="txtLastName" size="20">
-            <label for="numPnr">Födelsedag:</label><input type="number" name="numPnr" size="20">
-            <label for="txtAddress">Adress:</label><input type="text" name="txtAddress" size="20">
-            <label for="numZip">Postnummer:</label><input type="number" name="numZip" size="20">
-            <label for="txtCity">Ort:</label><input type="text" name="txtCity" size="20">
-            <label for="numTel">Telefon:</label><input type="number" name="numTel" size="20">
-            <label for="txtEmail">Epost:</label><input type="email" name="txtEmail" size="20">
+            <label for="txtFirstName">Förnamn:</label><input type="text" id="first" name="txtFirstName" size="20">
+            <label for="txtLastName">Efternamn:</label><input type="text" id="last" name="txtLastName" size="20">
+            <label for="numPnr">Födelsedag:</label><input type="number" id="pers" name="pers" size="20">
+            <label for="txtAddress">Adress:</label><input type="text" id="adr" name="address" size="20">
+            <label for="numZip">Postnummer:</label><input type="number" id="zip" name="zip" size="20">
+            <label for="txtCity">Ort:</label><input type="text" id="city" name="city" size="20">
+            <label for="numTel">Telefon:</label><input type="number" id="tel" name="tel" size="20">
+            <label for="txtEmail">Epost:</label><input type="email" id="mail" name="email" size="20">
             <br><br>
             <label for="rdApprove">Jag godkänner att Häljarps Skateförening hanterar mina personuppgifter:</label><input type="radio" name="rdApprove" size="20">
             <br><br><br>
-            <input value="Skicka" title="btnSend" type="button" onclick="alert('Hello')">
+            <input value="Skicka" title="btnSend" type="button" onclick="myFunction()">
     </fieldset>
 
+    <script>
+        
+        function myFunction() { 
+         var personData = [document.getElementById("first").value, 
+                          document.getElementById("last").value,
+                          document.getElementById("pers").value,
+                          document.getElementById("adr").value,
+                          document.getElementById("zip").value,
+                          document.getElementById("city").value,
+                          document.getElementById("tel").value,
+                          document.getElementById("mail").value];
+         
+
+        document.write(personData);
+        }   
+    </script>
     
 
 </body>
